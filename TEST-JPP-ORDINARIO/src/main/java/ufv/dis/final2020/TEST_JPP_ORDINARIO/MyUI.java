@@ -1,7 +1,5 @@
 package ufv.dis.final2020.TEST_JPP_ORDINARIO;
 
-import java.util.ArrayList;
-
 import javax.servlet.annotation.WebServlet;
 
 import com.vaadin.annotations.Theme;
@@ -10,7 +8,6 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinServlet;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Grid;
-import com.vaadin.ui.Label;
 import com.vaadin.ui.Notification;
 import com.vaadin.ui.TextField;
 import com.vaadin.ui.UI;
@@ -52,10 +49,10 @@ public class MyUI extends UI {
         Button button = new Button("Click Me");
         button.addClickListener(e -> {
             try {
-            	Producto p = new Producto(name.getValue(), surname.getValue(), dni.getValue(),(age.getValue()));
+            	Producto p = new Producto(name.getValue(), surname.getValue(), dni.getValue(),age.getValue());
             	inventario.addProducto(p);
-                gridcontactos.setItems(inventario.getlistaProductos());
 				GeneradorEAN13.generar(p);
+                gridcontactos.setItems(inventario.getlistaProductos());
 	        	Notification.show("imagen generado");
 			} catch (Exception e1) {
 				// TODO Auto-generated catch block;

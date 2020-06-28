@@ -1,11 +1,10 @@
 package ufv.dis.final2020.TEST_JPP_ORDINARIO;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
+import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class testapp {
+public class test2 {
 
 	@Test
 	public final void test1() {
@@ -16,7 +15,7 @@ public class testapp {
 	}
 	
 	@Test
-	public final void test2() {
+	public final void test0() {
 		Producto p = new Producto("name", "categoria", "price","");
 		assertEquals("price", p.getPrice());
 	}
